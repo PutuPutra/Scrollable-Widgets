@@ -3,6 +3,7 @@ import 'components/components.dart';
 import 'models/models.dart';
 import 'screens/explore_screen.dart';
 import 'screens/recipes_screen.dart';
+import 'screens/grocery_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,22 +18,23 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
     RecipesScreen(),
-    Card3(
-        recipe: ExploreRecipe(
-            title: 'Vegan Trends',
-            tags: [
-              'Healthy',
-              'Vegan',
-              'Carrots',
-              'Greens',
-              'Wheat',
-              'Pescetarian',
-              'Mint',
-              'Lemongrass',
-              'Salad',
-              'Water'
-            ],
-            backgroundImage: 'assets/magazine_pics/mag3.png')),
+    const GroceryScreen(),
+    // Card3(
+    //     recipe: ExploreRecipe(
+    //         title: 'Vegan Trends',
+    //         tags: [
+    //           'Healthy',
+    //           'Vegan',
+    //           'Carrots',
+    //           'Greens',
+    //           'Wheat',
+    //           'Pescetarian',
+    //           'Mint',
+    //           'Lemongrass',
+    //           'Salad',
+    //           'Water'
+    //         ],
+    //         backgroundImage: 'assets/magazine_pics/mag3.png')),
   ];
 
   void _onItemTapped(int index) {
