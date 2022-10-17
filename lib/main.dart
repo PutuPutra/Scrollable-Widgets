@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:fooderlich/models/models.dart';
 import 'config.dart';
 import 'home.dart';
+import 'models/tab_manager.dart';
 
 class AppData {
   bool isFavorited;
