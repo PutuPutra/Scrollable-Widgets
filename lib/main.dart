@@ -1,6 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:fooderlich/models/models.dart';
 import 'config.dart';
 import 'home.dart';
 
@@ -57,7 +59,14 @@ class _FooderlichState extends State<Fooderlich> {
       debugShowCheckedModeBanner: false,
       title: 'Fooderlich',
       theme: currentTheme.currentTheme(),
-      home: const Home(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => TabManager(),
+          ),
+        ],
+        child: const Home(),
+      ),
     );
   }
 }
